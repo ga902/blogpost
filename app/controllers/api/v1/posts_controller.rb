@@ -12,7 +12,7 @@ class Api::V1::PostsController < ApplicationController
      end
 
      def index
-        @posts = @blog.post.all
+        @posts = @blog.posts.all
         render json:@posts
      end
 

@@ -1,7 +1,8 @@
 class Api::V1::BlogsController < ApplicationController
 
     def index
-        blogs = Blog.all
+        blogs = Blog.includes(:posts).all
+
         render json:blogs
     end
     def show

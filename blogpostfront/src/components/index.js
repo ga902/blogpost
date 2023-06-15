@@ -5,7 +5,7 @@ const Index = () => {
     const [blogs, setBlogs] = useState({})
     const getBlogs = async () => {
         const response = await axios.get("http://127.0.0.1:3000/api/v1/blogs")
-        console.log(response)
+        console.log(response.data)
         setBlogs(response.data);
     }
     useEffect(() => {
